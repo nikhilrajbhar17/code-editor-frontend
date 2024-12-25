@@ -114,7 +114,7 @@ function EditorPage() {
   const runCode = async () => {
     setIsCompiling(true);
     try {
-      const response = await axios.post("http://localhost:5000/compile", {
+      const response = await axios.post("http://15.207.18.41:5000/compile", {
         code: codeRef.current,
         language: selectedLanguage,
       });

@@ -114,10 +114,13 @@ function EditorPage() {
   const runCode = async () => {
     setIsCompiling(true);
     try {
-      const response = await axios.post("http://15.207.18.41:5000/compile", {
-        code: codeRef.current,
-        language: selectedLanguage,
-      });
+      const response = await axios.post(
+        "https://code-editor.duckdns.org/compile",
+        {
+          code: codeRef.current,
+          language: selectedLanguage,
+        }
+      );
       console.log("Backend response:", response.data);
       setOutput(response.data.output || JSON.stringify(response.data));
     } catch (error) {

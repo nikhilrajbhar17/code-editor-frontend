@@ -7,5 +7,5 @@ export const initSocket = async () => {
     timeout: 10000,
     transports: ["websocket"],
   };
-  return io("http://15.207.18.41:5000", options);
+  return io("https://code-editor.duckdns.org", options);
 };
